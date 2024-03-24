@@ -5,7 +5,10 @@ function App() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-r from-pink-500 to-teal-500 h-screen flex justify-center items-center">
+    <div
+      className="h-screen flex justify-center items-center"
+      style={{ background: `linear-gradient(to right, #FF7ED4,#7Aff95)` }}
+    >
       <div>
         <p className="text-3xl font-mono text-white">Welcome to my world</p>
         <div

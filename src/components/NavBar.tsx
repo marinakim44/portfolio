@@ -2,11 +2,12 @@ import React from "react";
 
 type NavBarProps = {
   active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export default function NavBar({ active }: NavBarProps) {
+export default function NavBar({ active, setActive }: NavBarProps) {
   return (
-    <div className="bg-white opacity-25 p-3 my-10 w-11/12 max-w-3xl min-w-80 flex justify-evenly items-center">
+    <div className="bg-white opacity-25 p-3 my-10 w-11/12 max-w-3xl min-w-80 flex justify-evenly items-center cursor-pointer">
       {[
         "SUMMARY",
         "EDUCATION",
@@ -17,7 +18,7 @@ export default function NavBar({ active }: NavBarProps) {
         "CONTACTS",
       ].map((x) => {
         return (
-          <div key={x}>
+          <div key={x} onClick={() => setActive(x)}>
             <p
               className={`${
                 x === active

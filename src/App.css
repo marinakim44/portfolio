@@ -1,11 +1,13 @@
 .photo,
 .skill,
-.nav-btn {
+.nav-btn,
+.project {
   transition: transform 0.5s;
 }
 .photo:hover,
 .skill:hover,
-.nav-btn:hover {
+.nav-btn:hover,
+.project:hover {
   transform: scale(1.1);
 }
 .summary,

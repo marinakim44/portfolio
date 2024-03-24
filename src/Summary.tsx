@@ -1,7 +1,12 @@
 import React from "react";
 import Wrapper from "./components/Wrapper";
 
-export default function Summary() {
+type SummaryProps = {
+  active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function Summary({ active, setActive }: SummaryProps) {
   return (
     <Wrapper>
       <div className="grid grid-cols-4 gap-5">
@@ -77,17 +82,20 @@ export default function Summary() {
             content on YouTube, Instagram and TikTok.
           </p>
         </div>
-        <div className="rounded col-span-4 grid grid-cols-4 gap-5">
-          {["EDUCATION", "EXPERIENCE", "PROJECTS", "SKILLS"].map((x) => {
-            return (
-              <button
-                key={x}
-                className="nav-btn border-2 hover:pointer bg-gradient-to-r from-blue-500 to-teal-500 text-white text-center rounded p-1"
-              >
-                {x}
-              </button>
-            );
-          })}
+        <div className="rounded col-span-4 grid grid-cols-5 gap-5">
+          {["EDUCATION", "EXPERIENCE", "PROJECTS", "SKILLS", "CONTACTS"].map(
+            (x) => {
+              return (
+                <button
+                  key={x}
+                  className="nav-btn border-2 hover:pointer bg-gradient-to-r from-blue-500 to-teal-500 text-white text-center rounded p-1"
+                  onClick={() => setActive(x)}
+                >
+                  {x}
+                </button>
+              );
+            }
+          )}
         </div>
         <div className="map-btn bg-pink-500 text-white w-full col-span-4 text-center p-1 rounded border-2">
           <p>EXPLORE MIND MAP</p>

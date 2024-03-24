@@ -12,7 +12,7 @@ import Contacts from "./Contacts";
 export default function Home() {
   const [activeBar, setActiveBar] = useState("SUMMARY");
   const [color1, setColor1] = useState("#FF7ED4");
-  const [color2, setColor2] = useState("#6420AA");
+  const [color2, setColor2] = useState("#7Aff95");
 
   return (
     <div
@@ -31,9 +31,9 @@ export default function Home() {
           onChange={(e) => setColor2(e.target.value)}
         />
       </div>
-      <NavBar active={activeBar} />
+      <NavBar active={activeBar} setActive={setActiveBar} />
       {activeBar === "SUMMARY" ? (
-        <Summary />
+        <Summary active={activeBar} setActive={setActiveBar} />
       ) : activeBar === "EDUCATION" ? (
         <Education />
       ) : activeBar === "EXPERIENCE" ? (
