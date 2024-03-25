@@ -4,11 +4,16 @@ import reportWebVitals from "./reportWebVitals";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import Window from "./components/Window";
 import Home from "./Home";
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/portfolio",
+  //   element: <Window />,
+  // },
   {
-    path: "/",
+    path: "/portfolio",
     element: <App />,
   },
   {

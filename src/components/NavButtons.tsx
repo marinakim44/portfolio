@@ -12,7 +12,7 @@ export default function NavButtons({ active, setActive }: NavButtonsProps) {
   const navigate = useNavigate();
 
   return (
-    <div className="w-11/12 max-w-3xl min-w-80 flex justify-between my-10">
+    <div className="w-11/12 mt-10 max-w-3xl min-w-80 flex justify-between">
       <button
         onClick={() =>
           active === "SUMMARY"

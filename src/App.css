@@ -1,10 +1,10 @@
-.photo,
+/* .photo, */
 .skill,
 .nav-btn,
 .project {
   transition: transform 0.5s;
 }
-.photo:hover,
+/* .photo:hover, */
 .skill:hover,
 .nav-btn:hover,
 .project:hover {

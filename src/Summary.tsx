@@ -1,20 +1,23 @@
 import React from "react";
 import Wrapper from "./components/Wrapper";
+import Window from "./components/Window";
+// import NavButtons from "./components/NavButtons";
 
 type SummaryProps = {
   active: string;
   setActive: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export default function Summary({ active, setActive }: SummaryProps) {
+export default function Summary({ setActive, active }: SummaryProps) {
   return (
+    // <Window>
     <Wrapper>
       <div className="grid grid-cols-4 gap-5">
-        <div>
+        <div className="bg-gradient-to-r from-emerald-500 to-pink-500 p-1 rounded-full img-div">
           <img
             alt="marina-kim"
             src={require("./images/me.png")}
-            className="object-cover w-56 border-2 rounded-full photo"
+            className="object-cover w-56 rounded-full photo"
           />
         </div>
         <div className="col-span-3 row-span-2">
@@ -97,10 +100,12 @@ export default function Summary({ active, setActive }: SummaryProps) {
             }
           )}
         </div>
-        <div className="map-btn bg-pink-500 text-white w-full col-span-4 text-center p-1 rounded border-2">
-          <p>EXPLORE MIND MAP</p>
+        <div className="map-btn bg-gradient-to-r from-emerald-500 to-pink-500 p-1 text-white w-full col-span-4 text-center p-1 rounded">
+          <p className="bg-slate-800 font-bold rounded p-2">EXPLORE MIND MAP</p>
         </div>
       </div>
+      {/* <NavButtons active={active} setActive={setActive} /> */}
     </Wrapper>
+    // </Window>
   );
 }

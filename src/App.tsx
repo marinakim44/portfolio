@@ -10,7 +10,7 @@ function App() {
       style={{ background: `linear-gradient(to right, #FF7ED4,#7Aff95)` }}
     >
       <div>
-        <p className="text-3xl font-mono text-white">Welcome to my world</p>
+        {/* <p className="text-3xl font-mono text-white">Welcome to my world</p> */}
         <div
           className="computer flex flex-col items-center"
           onClick={() => navigate("/homepage")}
