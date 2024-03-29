@@ -11,10 +11,12 @@
   transform: scale(1.1);
 }
 .summary,
-.map-btn {
+.map-btn,
+.skill {
   transition: transform 0.5s;
 }
 .summary:hover,
-.map-btn:hover {
+.map-btn:hover,
+.skill:hover {
   transform: scale(1.02);
 }

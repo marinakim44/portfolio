@@ -33,7 +33,7 @@ export default function Window(props: PropsWithChildren) {
     <>
       <div className="window" onClick={handleClick}>
         <nav className="window-controls">
-          <div className="maximize"></div>
+          <div className="maximize">Marina Kim</div>
           <div className="flex gap-1">
             <div
               onClick={() => navigate("/portfolio")}

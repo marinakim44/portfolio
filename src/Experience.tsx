@@ -19,8 +19,8 @@ export default function Experience() {
                 <br />
                 {j.period}
                 <br />
-                {j.company}
-                <br />
+                {/* {j.company}
+                <br /> */}
                 {j.location}
               </p>
               <p className="col-span-4">{j.description}</p>

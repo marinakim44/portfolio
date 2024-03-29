@@ -1,5 +1,6 @@
 import React from "react";
 import Wrapper from "./components/Wrapper";
+import "./App.css";
 
 export default function Skills() {
   const skills = [
@@ -43,17 +44,17 @@ export default function Skills() {
                 "Bootstrap",
                 "Tailwind",
               ].includes(s)
-                ? "border-2 border-cyan-500 p-1 rounded"
+                ? "border-2 border-cyan-500 p-1 rounded skill"
                 : ["Node.js", "Express.js", "Nginx", "Knex.js"].includes(s)
-                ? "border-2 border-yellow-500 p-1 rounded"
+                ? "border-2 border-yellow-500 p-1 rounded skill"
                 : ["MongoDB", "PostgreSQL"].includes(s)
-                ? "border-2 border-emerald-500 p-1 rounded"
+                ? "border-2 border-emerald-500 p-1 rounded skill"
                 : ["JavaScript", "TypeScript", "Next.js"].includes(s)
-                ? "bg-gradient-to-r from-cyan-500 to-yellow-500 border-2 p-1 rounded"
+                ? "bg-gradient-to-r from-cyan-500 to-yellow-500 border-2 p-1 rounded skill"
                 : ["Azure", "GCP"].includes(s)
-                ? "border-2 border-emerald-500 p-1 rounded"
+                ? "border-2 border-emerald-500 p-1 rounded skill"
                 : s === "Firebase"
-                ? "bg-gradient-to-r from-orange-500 to-emerald-500 border-2 p-1 rounded"
+                ? "bg-gradient-to-r from-orange-500 to-emerald-500 border-2 p-1 rounded skill"
                 : undefined
             }
           >
